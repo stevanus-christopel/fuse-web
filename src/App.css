@@ -1,0 +1,184 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*
+    App
+*/
+
+.app__content--top {
+    position: relative;
+    padding-top: 11.5%;
+    padding-bottom: 4%;
+    background-image: radial-gradient(circle at 35% 46%, #323232, #000);
+}
+
+.app__logo {
+    display: block;
+    margin: auto;
+    margin-bottom: 11.5%;
+}
+
+.app__instagram {
+    position: absolute;
+    top: 11.5%;
+    margin-top: 52px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    text-decoration: initial;
+    color: #FBFBFB;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.app__instagram:hover {
+    text-decoration: underline;
+}
+
+.app__description {
+    margin: 0;
+    padding: 0 20.5%;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #FBFBFB;
+    text-align: center;
+}
+
+.app__description-underline--blue {
+    background-image: linear-gradient(to right, #3023AE, #53A0FD 48%, #B4EC51);
+    background-repeat: no-repeat;
+    background-size: 83% 2px;
+    background-position: center 40px;
+}
+
+.app__description-underline--purple {
+    display: block;
+    background-image: linear-gradient(92deg, rgba(48, 35, 174, 0.72), rgba(200, 109, 215, 0.72));
+    background-repeat: no-repeat;
+    background-size: 83% 19px;
+    background-position: center 40px;
+}
+
+.app__content--bottom {
+    background-image: linear-gradient(to top, #181818, #2E2E2E);
+    box-shadow: 0 -8px 64px 0 rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.app__email {
+    color: #FFF;
+}
+
+.app__email label {
+    display: block;
+    margin: auto;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: center;
+}
+
+.app__email input {
+    display: block;
+    margin: 24px auto;
+    padding: 18px 32px;
+    border: none;
+    border-radius: 28.5px;
+    font-size: 14px;
+    line-height: 21px;
+    width: 458px;
+    max-width: 60%;
+    outline: none;
+}
+
+.app__email input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #BDBDBD;
+}
+
+.app__email input::-moz-placeholder { /* Firefox 19+ */
+    color: #BDBDBD;
+}
+
+.app__email input:-ms-input-placeholder { /* IE 10+ */
+    color: #BDBDBD;
+}
+
+.app__email input:-moz-placeholder { /* Firefox 18- */
+    color: #BDBDBD;
+}
+
+.app__content--bottom h2 {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.app__content--bottom-image {
+    width: 391px;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: -120px;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+.app__footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFF;
+    clear: both;
+    padding: 40px 10%;
+    background-color: #0F0F0F;
+}
+
+.app__footer-copyright {
+    float: left;
+}
+
+.app__footer-contact {
+    float: right;
+}
+
+.app__footer-contact a {
+    color: #FFF;
+    text-decoration: initial;
+    display: inline-block;
+}
+
+.app__footer-contact a:first-child {
+    margin-right: 24px;
+}
+
+.app__footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.app__footer-contact a img {
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
