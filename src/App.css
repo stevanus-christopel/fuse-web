@@ -90,17 +90,42 @@ body {
     text-align: center;
 }
 
-.app__email input {
+.app__email-form {
     display: block;
     margin: 24px auto;
+    width: 458px;
+    max-width: 60%;
+}
+
+.app__email-form input {
     padding: 18px 32px;
+    padding-right: 90px;
     border: none;
     border-radius: 28.5px;
     font-size: 14px;
     line-height: 21px;
-    width: 458px;
-    max-width: 60%;
     outline: none;
+    width: 100%;
+}
+
+.app__email-form button {
+    margin-left: -108px;
+    padding: 11px 24px;
+    background-image: linear-gradient(307deg, #1F1F1F, #434442 65%, #7B7B7B);
+    box-shadow: -4px 6px 11px 0 rgba(0, 0, 0, 0.5);
+    border: solid 0.5px #666;
+    border-radius: 28.5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #FFF;
+    outline: none;
+}
+
+.app__email-form button:hover {
+    cursor: pointer;
 }
 
 .app__email input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
