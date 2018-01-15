@@ -20,7 +20,10 @@ body {
     position: relative;
     padding-top: 305px;
     padding-bottom: 41px;
-    background-image: radial-gradient(circle at 35% 46%, #323232, #000);
+    background-color: #323232;
+    background-image: url('./images/background-top.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .app__logo {
