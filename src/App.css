@@ -10,11 +10,17 @@ html * {
 body {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 /*
     App
 */
+
+.app {
+    position: relative;
+    overflow: hidden;
+}
 
 .app__content--top {
     position: relative;
@@ -57,6 +63,7 @@ body {
     color: #FBFBFB;
     text-align: center;
     max-width: 835px;
+    box-sizing: initial;
 }
 
 .app__description-underline--blue {
@@ -174,7 +181,7 @@ body {
 }
 
 .app__footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100px;
     font-size: 14px;
@@ -183,6 +190,7 @@ body {
     clear: both;
     padding: 40px 10%;
     background-color: #0F0F0F;
+    z-index: 3;
 }
 
 .app__footer-copyright {
@@ -211,6 +219,97 @@ body {
     margin-right: 8px;
     position: relative;
     top: 2px;
+}
+
+.app__image-fluid {
+    display: none;
+}
+
+.app__image-fluid--1 {
+    top: -180px;
+    left: -100px;
+    width: 600px;
+}
+
+.app__image-fluid--2 {
+    top: 160px;
+    right: 340px;
+    width: 80px;
+}
+
+.app__image-fluid--3 {
+    top: 60px;
+    right: -180px;
+    width: 940px;
+}
+
+.app__image-fluid--4 {
+    top: 560px;
+    left: 110px;
+    width: 70px;
+    z-index: 2;
+}
+
+.app__image-fluid--5 {
+    top: 420px;
+    left: -20px;
+    width: 500px;
+    z-index: 1;
+}
+
+.app__image-fluid--6 {
+    top: 840px;
+    right: -180px;
+    width: 500px;
+}
+
+.app__image-fluid--7 {
+    top: 1240px;
+    right: 180px;
+    width: 100px;
+}
+
+.app__image-fluid--8 {
+    bottom: 140px;
+    right: -320px;
+    width: 900px;
+}
+
+.app__image-fluid--9 {
+    bottom: 510px;
+    right: 400px;
+    width: 80px;
+}
+
+.app__image-fluid--10 {
+    bottom: -100px;
+    right: -120px;
+    width: 800px;
+}
+
+.app__image-fluid--11 {
+    bottom: -240px;
+    left: -400px;
+    width: 1000px;
+}
+
+.app__image-fluid--12 {
+    bottom: 160px;
+    left: 160px;
+    width: 80px;
+}
+
+.app__image-fluid--13 {
+    bottom: -460px;
+    left: -120px;
+    width: 900px;
+}
+
+@media (min-width: 1200px) {
+    .app__image-fluid {
+        position: absolute;
+        display: initial;
+    }
 }
 
 @media (max-width: 680px) {

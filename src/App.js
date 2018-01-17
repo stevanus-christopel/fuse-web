@@ -5,6 +5,7 @@ import svgFuseLogo from './images/logo.svg';
 import pngShakaHand from './images/shaka-hand@2x.png';
 import svgMailIcon from './images/icon-mail.svg';
 import svgInstagramIcon from './images/icon-instagram.svg';
+import svgFluidBubble from './images/fluid-bubble.svg';
 
 class App extends Component {
   render() {
@@ -55,6 +56,20 @@ class App extends Component {
             </a>
           </div>
         </div>
+
+        <img className="app__image-fluid app__image-fluid--1" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--2" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--3" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--4" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--5" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--6" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--7" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--8" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--9" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--10" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--11" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--12" alt="" src={svgFluidBubble} />
+        <img className="app__image-fluid app__image-fluid--13" alt="" src={svgFluidBubble} />
       </div>
     );
   }
