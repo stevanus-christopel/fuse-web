@@ -27,7 +27,7 @@ class App extends Component {
 
         <div className="app__content--bottom">
           <div className="app__email">
-            <label for="txt-email">Describe your project. Email us!</label>
+            <label htmlFor="txt-email">Describe your project. Email us!</label>
 
             <div className="app__email-form">
             <input type="text" id="txt-email" name="txt-email"
