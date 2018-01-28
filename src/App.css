@@ -24,7 +24,7 @@ body {
 
 .app__content--top {
     position: relative;
-    padding-top: 305px;
+    padding-top: 282px;
     padding-bottom: 41px;
     background-color: #323232;
     background-image: url('./images/background-top.png');
@@ -33,9 +33,32 @@ body {
 }
 
 .app__logo {
+    position: relative;
     display: block;
     margin: auto;
-    margin-bottom: 251px;
+    height: 200px;
+    margin-top: 80px;
+    margin-bottom: 600px;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition:
+        opacity 2s ease,
+        margin 4s ease 2s;
+    -moz-transition:
+        opacity 2s ease,
+        margin 4s ease 2s;
+    -o-transition:
+        opacity 2s ease,
+        margin 4s ease 2s;
+    transition:
+        opacity 2s ease,
+        margin 4s ease 2s;
+}
+
+.app__logo--show {
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 248px;
 }
 
 .app__instagram {
@@ -46,8 +69,18 @@ body {
     text-align: center;
     text-decoration: initial;
     color: #FBFBFB;
+    z-index: 10;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
+    opacity: 0;
+    -webkit-transition: opacity 6s ease 2s;
+    -moz-transition: opacity 6s ease 2s;
+    -o-transition: opacity 6s ease 2s;
+    transition: opacity 6s ease 2s;
+}
+
+.app__instagram--show {
+    opacity: 1;
 }
 
 .app__instagram:hover {
@@ -55,6 +88,7 @@ body {
 }
 
 .app__description {
+    position: relative;
     margin: auto;
     padding: 0 16px;
     font-size: 40px;
@@ -64,6 +98,11 @@ body {
     text-align: center;
     max-width: 835px;
     box-sizing: initial;
+    z-index: 10;
+    -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+    transition: opacity 2s ease;
 }
 
 .app__description-underline--blue {
@@ -92,8 +131,10 @@ body {
 }
 
 .app__email label {
+    position: relative;
     display: block;
     margin: auto;
+    z-index: 10;
     font-size: 21px;
     font-weight: 300;
     line-height: 1;
@@ -101,11 +142,13 @@ body {
 }
 
 .app__email-form {
+    position: relative;
     display: block;
     margin: 24px auto;
     margin-bottom: 0;
     width: 458px;
     max-width: 60%;
+    z-index: 10;
 }
 
 .app__email-form input {
@@ -119,7 +162,28 @@ body {
     width: 100%;
 }
 
-.app__email-form button {
+.app__email-form .btn--liquid {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 148px;
+    height: 87px;
+    margin-top: -16px;
+    margin-left: -135px;
+}
+
+.app__email-form .btn--liquid:hover {
+    cursor: pointer;
+}
+
+.app__email-form .btn--liquid text {
+    position: relative;
+    top: -200px;
+}
+
+/* .app__email-form .button {
     margin-left: -108px;
     padding: 11px 24px;
     background-image: linear-gradient(307deg, #1F1F1F, #434442 65%, #7B7B7B);
@@ -132,12 +196,8 @@ body {
     letter-spacing: 0.3px;
     text-align: center;
     color: #FFF;
-    outline: none;
-}
-
-.app__email-form button:hover {
-    cursor: pointer;
-}
+    outline: none;   
+} */
 
 .app__email input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #BDBDBD;
@@ -156,6 +216,8 @@ body {
 }
 
 .app__content--bottom h2 {
+    position: relative;
+    z-index: 10;
     font-size: 100px;
     font-weight: bold;
     line-height: 1;
@@ -167,6 +229,8 @@ body {
 }
 
 .app__content--bottom-image {
+    position: relative;
+    z-index: 10;
     width: 391px;
     max-width: 80%;
     display: block;

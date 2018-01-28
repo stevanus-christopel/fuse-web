@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import LiquidButton from './components/LiquidButton';
+
 import './App.css';
 
 import svgFuseLogo from './images/logo.svg';
@@ -7,21 +10,70 @@ import svgMailIcon from './images/icon-mail.svg';
 import svgInstagramIcon from './images/icon-instagram.svg';
 import svgFluidBubble from './images/fluid-bubble.svg';
 
+const mail_service = "http://localhost:8000/";
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.sendEmail = this.sendEmail.bind(this);
+  }
+  componentDidMount() {
+    const liquidButtons = document.querySelectorAll('.btn--liquid')
+    for (let button of liquidButtons) {
+      new LiquidButton(button)
+    }
+
+    setTimeout(() => {
+      this.logoElement.classList.add("app__logo--show");
+      this.instagramElement.classList.add("app__instagram--show");
+    }, 600);
+  }
+  sendEmail() {
+    if(document.getElementById("txt-email").value.length <= 0) {
+      alert("Please fill your email.");
+    } else {
+      // fetch(mail_service, {
+      //   method: 'POST',
+      //   headers: {
+      //     Accept: 'application/json',
+      //     'Content-Type': 'application/json',
+      //   },
+      //   credentials: 'include',
+      //   body: JSON.stringify({
+      //     email: document.getElementById("txt-email").value,
+      //   }),
+      // })
+      // .then(response => response.json())
+      // .then(response => {
+      //   alert(response);
+      // });
+      var mailto_link = 'mailto:hello@byfuse.id?subject=Email from FUSE Website&body='+
+      document.getElementById("txt-email").value+
+      ' want to know more about us.';
+      
+      window.location.href = mailto_link;
+    }
+  }
   render() {
     return (
       <div className="app">
         <div className="app__content--top">
-          <img className="app__logo" alt='FUSE Design Studio' src={svgFuseLogo} />
-          <a className="app__instagram" href="https://www.instagram.com/fuse.id/" target="_blank">
+          <img className="app__logo" alt='FUSE Design Studio' src={svgFuseLogo}
+            ref={(logoElement) => { this.logoElement = logoElement; }} />
+          <a className="app__instagram" href="https://www.instagram.com/fuse.id/" target="_blank"
+            ref={(instagramElement) => { this.instagramElement = instagramElement; }} >
             Instagram / fuse.id
           </a>
 
           <p className="app__description">
-            FUSE is a design studio based in Jakarta, Indonesia observe not only see, catching up with the latest design hypes to meet your product needs, <span className="app__description-underline--blue">exploring all the way around</span>.
+            FUSE is a design studio based in Jakarta, Indonesia.
+            Observe not only to see,  but also catching up with the latest design
+            hypes to meet your product needs. Exploring all the way around.
             <br /><br />
-            FUSE believe in consistency, efficiency, and blabla to build, to gain
-            your product in a better way, superlative way. <span className="app__description-underline--purple">Bringing together strategy,</span> technology, and design we create digital experience to create a meaningful relationship between brands, product, and user.
+            FUSE believes in Curiosity, Honest and Harmony to build your product in a better and superlative way. Bringing together strategy, 
+            technology, and design, FUSE creates digital experience to build a meaningful
+            relationship between brands, product, and user.
           </p>
         </div>
 
@@ -30,12 +82,19 @@ class App extends Component {
             <label htmlFor="txt-email">Describe your project. Email us!</label>
 
             <div className="app__email-form">
-            <input type="text" id="txt-email" name="txt-email"
-            placeholder="Type your Email.." />
-            <button>Submit</button>
+              <input type="text" id="txt-email" name="txt-email"
+              placeholder="Type your Email.." />
+              <button className="btn--liquid" onClick={this.sendEmail}
+                data-padding="0"
+                data-placeholder="Submit"
+                data-textstyle="fill: #FFFFFF; font-size: 14px;"
+                data-basecolor="#666666"
+                data-gradient="#7b7b7b, #434442">
+                  <svg></svg>
+              </button>
             </div>
 
-            <h2>SEE YOU VERY SOON</h2>
+            <h2 className="app__content--bottom-text">SEE YOU VERY SOON</h2>
 
             <img className="app__content--bottom-image" alt="FUSE Design Studio" src={pngShakaHand} />
           </div>
