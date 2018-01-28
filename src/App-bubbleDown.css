@@ -303,20 +303,20 @@ body {
     top: 160px;
     right: 340px;
     width: 80px;
-    -webkit-animation: MoveUpDown_2 160s linear infinite; /* Safari 4+ */
-    -moz-animation: MoveUpDown_2 160s linear infinite; /* Fx 5+ */
-    -o-animation: MoveUpDown_2 160s linear infinite; /* Opera 12+ */
-    animation: MoveUpDown_2 160s linear infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: MoveUpDown_2 140s linear infinite; /* Safari 4+ */
+    -moz-animation: MoveUpDown_2 140s linear infinite; /* Fx 5+ */
+    -o-animation: MoveUpDown_2 140s linear infinite; /* Opera 12+ */
+    animation: MoveUpDown_2 140s linear infinite; /* IE 10+, Fx 29+ */
 }
 
 .app__image-fluid--3 {
     top: 60px;
     right: -180px;
     width: 940px;
-    -webkit-animation: MoveUpDown_3 180s linear infinite; /* Safari 4+ */
-    -moz-animation: MoveUpDown_3 180s linear infinite; /* Fx 5+ */
-    -o-animation: MoveUpDown_3 180s linear infinite; /* Opera 12+ */
-    animation: MoveUpDown_3 180s linear infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: MoveUpDown_3 140s linear infinite; /* Safari 4+ */
+    -moz-animation: MoveUpDown_3 140s linear infinite; /* Fx 5+ */
+    -o-animation: MoveUpDown_3 140s linear infinite; /* Opera 12+ */
+    animation: MoveUpDown_3 140s linear infinite; /* IE 10+, Fx 29+ */
 }
 
 .app__image-fluid--4 {
@@ -459,13 +459,13 @@ body {
         top: -180px;
     }
 
-    98% {
-        top: 2400px;
+    10% {
+        top: -400px;
         visibility: hidden;
     }
 
-    99% {
-        top: -400px;
+    11% {
+        top: 2400px;
         visibility: hidden;
     }
 
@@ -479,13 +479,13 @@ body {
         top: 160px;
     }
 
-    98% {
-        top: 2480px;
+    10% {
+        top: -40px;
         visibility: hidden;
     }
 
-    99% {
-        top: -40px;
+    11% {
+        top: 2480px;
         visibility: hidden;
     }
 
@@ -499,13 +499,13 @@ body {
         top: 60px;
     }
 
-    78% {
-        top: 2200px;
+    30% {
+        top: -600px;
         visibility: hidden;
     }
 
-    79% {
-        top: -600px;
+    31% {
+        top: 2200px;
         visibility: hidden;
     }
 
@@ -519,13 +519,13 @@ body {
         top: 560px;
     }
 
-    98% {
-        top: 2480px;
+    10% {
+        top: -100px;
         visibility: hidden;
     }
 
-    99% {
-        top: -100px;
+    11% {
+        top: 2480px;
         visibility: hidden;
     }
 
@@ -539,13 +539,13 @@ body {
         top: 420px;
     }
 
-    78% {
-        top: 2340px;
+    30% {
+        top: -420px;
         visibility: hidden;
     }
 
-    79% {
-        top: -420px;
+    31% {
+        top: 2340px;
         visibility: hidden;
     }
 
@@ -559,13 +559,13 @@ body {
         top: 840px;
     }
 
-    78% {
-        top: 2340px;
+    30% {
+        top: -330px;
         visibility: hidden;
     }
 
-    79% {
-        top: -330px;
+    31% {
+        top: 2340px;
         visibility: hidden;
     }
 
@@ -579,13 +579,13 @@ body {
         top: 1240px;
     }
 
-    78% {
-        top: 2400px;
+    30% {
+        top: -60px;
         visibility: hidden;
     }
 
-    79% {
-        top: -60px;
+    31% {
+        top: 2400px;
         visibility: hidden;
     }
 
@@ -599,13 +599,13 @@ body {
         bottom: 140px;
     }
 
-    21% {
-        bottom: -600px;
+    80% {
+        bottom: 2300px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2300px;
+    81% {
+        bottom: -600px;
         visibility: hidden;
     }
 
@@ -619,13 +619,13 @@ body {
         bottom: 510px;
     }
 
-    21% {
-        bottom: 20px;
+    80% {
+        bottom: 2520px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2520px;
+    81% {
+        bottom: 20px;
         visibility: hidden;
     }
 
@@ -639,13 +639,13 @@ body {
         bottom: -100px;
     }
 
-    21% {
-        bottom: -600px;
+    80% {
+        bottom: 2280px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2280px;
+    81% {
+        bottom: -600px;
         visibility: hidden;
     }
 
@@ -659,13 +659,13 @@ body {
         bottom: -240px;
     }
 
-    21% {
-        bottom: -680px;
+    80% {
+        bottom: 2200px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2200px;
+    81% {
+        bottom: -680px;
         visibility: hidden;
     }
 
@@ -679,13 +679,13 @@ body {
         bottom: 160px;
     }
 
-    21% {
-        bottom: 0;
+    80% {
+        bottom: 2560px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2560px;
+    81% {
+        bottom: 0;
         visibility: hidden;
     }
 
@@ -699,13 +699,13 @@ body {
         bottom: -460px;
     }
 
-    21% {
-        bottom: -660px;
+    80% {
+        bottom: 2300px;
         visibility: hidden;
     }
 
-    22% {
-        bottom: 2300px;
+    81% {
+        bottom: -660px;
         visibility: hidden;
     }
 
