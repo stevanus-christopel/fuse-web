@@ -29,6 +29,16 @@ class App extends Component {
       this.instagramElement.classList.add("app__instagram--show");
     }, 600);
   }
+  handleMouseEnterDescription = (className) => {
+    document.getElementsByClassName("app__description")[0].style.color = "rgba(255, 255, 255, 0.12)";
+    document.getElementsByClassName("app__instagram")[0].style.color = "rgba(255, 255, 255, 0.12)";
+    document.getElementsByClassName(className)[0].style.color = "#FFFFFF";
+  }
+  handleMouseLeaveDescription = (className) => {
+    document.getElementsByClassName("app__description")[0].style.color = "#FFFFFF";
+    document.getElementsByClassName("app__instagram")[0].style.color = "#FFFFFF";
+    document.getElementsByClassName(className)[0].style.color = null;
+  }
   sendEmail() {
     if(document.getElementById("txt-email").value.length <= 0) {
       alert("Please fill your email.");
@@ -69,7 +79,12 @@ class App extends Component {
           <p className="app__description">
             FUSE is a design studio based in Jakarta, Indonesia.
             Observe not only to see,  but also catching up with the latest design
-            hypes to meet your product needs. Exploring all the way around.
+            hypes to meet your product needs.
+            <span className="app__description-underline--blue"
+            onMouseEnter={() => this.handleMouseEnterDescription('app__description-underline--blue')}
+            onMouseLeave={() => this.handleMouseLeaveDescription('app__description-underline--blue')}>
+              Exploring all the way around.
+            </span>
             <br /><br />
             FUSE believes in Curiosity, Honest and Harmony to build your product in a better and superlative way. Bringing together strategy, 
             technology, and design, FUSE creates digital experience to build a meaningful

@@ -73,10 +73,18 @@ body {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     opacity: 0;
-    -webkit-transition: opacity 6s ease 2s;
-    -moz-transition: opacity 6s ease 2s;
-    -o-transition: opacity 6s ease 2s;
-    transition: opacity 6s ease 2s;
+    -webkit-transition:
+        opacity 6s ease,
+        color 0.5s ease;
+    -moz-transition:
+        opacity 6s ease,
+        color 0.5s ease;
+    -o-transition:
+        opacity 6s ease,
+        color 0.5s ease;
+    transition:
+        opacity 6s ease,
+        color 0.5s ease;
 }
 
 .app__instagram--show {
@@ -96,16 +104,27 @@ body {
     line-height: 1.7;
     color: #FBFBFB;
     text-align: center;
-    max-width: 835px;
+    max-width: 800px;
     box-sizing: initial;
     z-index: 10;
-    -webkit-transition: opacity 2s ease;
-    -moz-transition: opacity 2s ease;
-    -o-transition: opacity 2s ease;
-    transition: opacity 2s ease;
+    -webkit-transition:
+        opacity 2s ease,
+        color 0.5s ease;
+    -moz-transition:
+        opacity 2s ease,
+        color 0.5s ease;
+    -o-transition:
+        opacity 2s ease,
+        color 0.5s ease;
+    transition:
+        opacity 2s ease,
+        color 0.5s ease;
 }
 
 .app__description-underline--blue {
+    position: relative;
+    display: block;
+    white-space: nowrap;
     background-image: linear-gradient(to right, #3023AE, #53A0FD 48%, #B4EC51);
     background-repeat: no-repeat;
     background-size: 83% 2px;
@@ -113,11 +132,17 @@ body {
 }
 
 .app__description-underline--purple {
+    position: relative;
     display: block;
     background-image: linear-gradient(92deg, rgba(48, 35, 174, 0.72), rgba(200, 109, 215, 0.72));
     background-repeat: no-repeat;
     background-size: 83% 19px;
     background-position: center 40px;
+}
+
+.app__description-underline--blue:hover,
+.app__description-underline--purple:hover {
+    cursor: pointer;
 }
 
 .app__content--bottom {
@@ -172,6 +197,11 @@ body {
     height: 87px;
     margin-top: -16px;
     margin-left: -135px;
+}
+
+.app__email-form .btn--liquid svg {
+    width: 148px;
+    height: 87px;
 }
 
 .app__email-form .btn--liquid:hover {
