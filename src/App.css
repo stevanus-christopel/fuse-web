@@ -22,6 +22,16 @@ body {
     overflow: hidden;
 }
 
+.app__line {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 100%;
+    width: 2px;
+    background-color: #1A1A1A;
+    z-index: 1;
+}
+
 .app__content--top {
     position: relative;
     padding-top: 282px;
@@ -74,16 +84,16 @@ body {
     transform: rotate(-90deg);
     opacity: 0;
     -webkit-transition:
-        opacity 6s ease,
+        opacity 6s ease 2s,
         color 0.5s ease;
     -moz-transition:
-        opacity 6s ease,
+        opacity 6s ease 2s,
         color 0.5s ease;
     -o-transition:
-        opacity 6s ease,
+        opacity 6s ease 2s,
         color 0.5s ease;
     transition:
-        opacity 6s ease,
+        opacity 6s ease 2s,
         color 0.5s ease;
 }
 
@@ -121,27 +131,29 @@ body {
         color 0.5s ease;
 }
 
-.app__description-underline--blue {
-    position: relative;
-    display: block;
-    white-space: nowrap;
-    background-image: linear-gradient(to right, #3023AE, #53A0FD 48%, #B4EC51);
+.app__description-underline--blue-1 {
+    display: inline-block;
+    background-image: url('./images/underline-blue-1.svg');
     background-repeat: no-repeat;
-    background-size: 83% 2px;
-    background-position: center 40px;
+    background-position: center bottom;
+}
+
+.app__description-underline--blue-2 {
+    display: block;
+    background-image: url('./images/underline-blue-2.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 
 .app__description-underline--purple {
-    position: relative;
-    display: block;
-    background-image: linear-gradient(92deg, rgba(48, 35, 174, 0.72), rgba(200, 109, 215, 0.72));
+    display: inline-block;
+    background-image: url('./images/underline-purple.svg');
     background-repeat: no-repeat;
-    background-size: 83% 19px;
-    background-position: center 40px;
+    background-position: center 38px;
 }
 
-.app__description-underline--blue:hover,
-.app__description-underline--purple:hover {
+.app__description-underline--purple:hover,
+.app__description-underline--blue:hover {
     cursor: pointer;
 }
 
@@ -460,8 +472,21 @@ body {
 
 @media (max-width: 768px) {
     .app__description {
-        font-size: 32px;
+        font-size: 28px;
         max-width: 704px;
+    }
+
+    .app__description-underline--blue-1 {
+        background-size: 280px;
+    }
+
+    .app__description-underline--blue-2 {
+        background-size: 174px;
+    }
+
+    .app__description-underline--purple {
+        background-position: center 26px;
+        background-size: 408px;
     }
 
     .app__content--bottom h2 {
@@ -515,6 +540,19 @@ body {
     .app__description {
         font-size: 18px;
         padding: 0 24px;
+    }
+
+    .app__description-underline--blue-1 {
+        background-size: 160px;
+    }
+
+    .app__description-underline--blue-2 {
+        background-size: 110px;
+    }
+
+    .app__description-underline--purple {
+        background-position: center 18px;
+        background-size: 264px;
     }
 
     .app__email-form {

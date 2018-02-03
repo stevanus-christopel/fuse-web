@@ -17,6 +17,7 @@ class App extends Component {
     super(props);
 
     this.sendEmail = this.sendEmail.bind(this);
+    this.openPage = this.openPage.bind(this);
   }
   componentDidMount() {
     const liquidButtons = document.querySelectorAll('.btn--liquid')
@@ -32,11 +33,13 @@ class App extends Component {
   handleMouseEnterDescription = (className) => {
     document.getElementsByClassName("app__description")[0].style.color = "rgba(255, 255, 255, 0.12)";
     document.getElementsByClassName("app__instagram")[0].style.color = "rgba(255, 255, 255, 0.12)";
+    document.getElementsByClassName("app__logo")[0].style.opacity = 0.12;
     document.getElementsByClassName(className)[0].style.color = "#FFFFFF";
   }
   handleMouseLeaveDescription = (className) => {
     document.getElementsByClassName("app__description")[0].style.color = "#FFFFFF";
     document.getElementsByClassName("app__instagram")[0].style.color = "#FFFFFF";
+    document.getElementsByClassName("app__logo")[0].style.opacity = 1;
     document.getElementsByClassName(className)[0].style.color = null;
   }
   sendEmail() {
@@ -65,10 +68,14 @@ class App extends Component {
       window.location.href = mailto_link;
     }
   }
+  openPage(url) {
+    window.open(url, "_blank");
+  }
   render() {
     return (
       <div className="app">
         <div className="app__content--top">
+          <div className="app__line" />
           <img className="app__logo" alt='FUSE Design Studio' src={svgFuseLogo}
             ref={(logoElement) => { this.logoElement = logoElement; }} />
           <a className="app__instagram" href="https://www.instagram.com/fuse.id/" target="_blank"
@@ -79,15 +86,21 @@ class App extends Component {
           <p className="app__description">
             FUSE is a design studio based in Jakarta, Indonesia.
             Observe not only to see,  but also catching up with the latest design
-            hypes to meet your product needs.
-            <span className="app__description-underline--blue"
+            hypes to meet your product needs. <span className="app__description-underline--blue"
+            onClick={() => this.openPage("https://www.instagram.com/fuse.id/")}
             onMouseEnter={() => this.handleMouseEnterDescription('app__description-underline--blue')}
             onMouseLeave={() => this.handleMouseLeaveDescription('app__description-underline--blue')}>
-              Exploring all the way around.
+              <span className="app__description-underline--blue-1">exploring all the </span>
+              <span className="app__description-underline--blue-2">way around</span>.
             </span>
             <br /><br />
-            FUSE believes in Curiosity, Honest and Harmony to build your product in a better and superlative way. Bringing together strategy, 
-            technology, and design, FUSE creates digital experience to build a meaningful
+            FUSE believes in Curiosity, Honest and Harmony to build your product in a better and 
+            superlative way. <span className="app__description-underline--purple"
+            onClick={() => this.openPage("https://www.instagram.com/fuse.id/")}
+            onMouseEnter={() => this.handleMouseEnterDescription('app__description-underline--purple')}
+            onMouseLeave={() => this.handleMouseLeaveDescription('app__description-underline--purple')}>
+            Bringing together strategy, </span> technology, and design, 
+            FUSE creates digital experience to build a meaningful
             relationship between brands, product, and user.
           </p>
         </div>
